@@ -1,68 +1,35 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  h1 {
+    @apply text-3xl font-medium text-hawkes-blue-400 cursor-default
   }
-  a:hover {
-    color: #747bff;
+
+  a {
+    @apply text-hawkes-blue-400 font-bold
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@layer components {
+  .App {
+    @apply bg-gradient-to-br from-bg-01 via-bg-02 to-bg-03 w-screen h-screen
+  }
+
+  .signUp-input {
+    @apply h-10 flex flex-row items-center gap-2 w-full border border-gray-300 rounded-md px-4 py-6 transition-all duration-300 focus-within:border-hawkes-blue-500
+  }
+
+  .signUp-input-error {
+    @apply h-10 flex flex-row items-center gap-2 w-full border border-gray-300 rounded-md px-4 py-6 transition-all duration-300 focus-within:border-error-400
+  }
+
+  .btn-form {
+    @apply h-10 flex flex-row items-center justify-center w-full rounded-md px-4 py-6 bg-hawkes-blue-300 text-hawkes-blue-900 font-bold
+  }
+
+  .btn-form:disabled {
+    @apply bg-hawkes-blue-50 text-gray-400 cursor-not-allowed
   }
 }
