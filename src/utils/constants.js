@@ -8,3 +8,8 @@ export const Messages = {
 
     NO_SERVER_RESPONSE: "No hay respuesta del servidor.",
 }
+
+export const Roles = {
+    User: "USER",
+    Admin: "ADMIN"
+}

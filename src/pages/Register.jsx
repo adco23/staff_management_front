@@ -142,7 +142,7 @@ const Register = () => {
           <button type="submit" disabled={!validEmail || !validPwd || !validMatchPwd ? true : false} className="btn-form">Registrarse</button>
         </form>
         <p>
-          ¿Ya está registrado? <span><a href="#">Iniciar sesión</a></span>
+          ¿Ya está registrado? <span><a href="/login">Iniciar sesión</a></span>
         </p>
         { errMsg ? <AlertContainer ref={errRef} type="error" message={errMsg}/> : false }
       </div>
